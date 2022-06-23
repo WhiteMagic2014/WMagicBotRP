@@ -12,7 +12,7 @@ import java.util.List;
  * @date: 2020/8/20 17:32
  **/
 @Mapper
-public interface BotDBMapper {
+public interface BotDBDao {
 
     /**
      * @Name: DBVersion

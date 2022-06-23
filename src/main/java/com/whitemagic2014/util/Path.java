@@ -1,7 +1,5 @@
 package com.whitemagic2014.util;
 
-import java.util.List;
-
 /**
  * @Description: 路径工具
  * @author: magic chen

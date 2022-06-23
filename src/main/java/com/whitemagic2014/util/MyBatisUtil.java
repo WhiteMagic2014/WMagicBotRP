@@ -23,12 +23,11 @@ import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 
 
-
 /**
  * @Description: 无spring环境，非mybatis-config.xml配置文件 mybatis初始化
  * @author: magic chen
  * @date: 2022/6/23 15:08
- *
+ * <p>
  * xml配置文件的方式需要指定链接url，但是sqlite的存储文件我又希望跟着jar走,这时候xml配置就没办法满足了
  * 所以按照config配置文件 来手动构建Configuration
  * 其中mapper解析方式经过尝试,package与class ，xml与interface始终无法绑定成功
@@ -43,7 +42,7 @@ public class MyBatisUtil {
     private static SqlSessionFactory factory = null;
 
     public static SqlSession getSqlSession() {
-        return factory.openSession();
+        return factory.openSession(true);
     }
 
     static {

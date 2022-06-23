@@ -4,6 +4,7 @@ import com.whitemagic2014.command.CheckDb
 import com.whitemagic2014.command.TestMiraiCommand
 import com.whitemagic2014.event.TestEvent
 import com.whitemagic2014.util.DBInitHelper
+import com.whitemagic2014.util.DBVersion
 import com.whitemagic2014.util.MyBatisUtil
 import net.mamoe.mirai.console.command.CommandManager.INSTANCE.register
 import net.mamoe.mirai.console.extension.PluginComponentStorage
@@ -20,6 +21,7 @@ object WMagicBotRPKt : KotlinPlugin(
     // 初始化配置
     override fun PluginComponentStorage.onLoad() {
         DBInitHelper.getInstance().initDBIfNotExist()
+        DBVersion.getInstance().checkUpdateDB()
 //        MiraiLogger.setDefaultLoggerCreator { identity -> LoggerFactory.getLogger(identity).asMiraiLogger() }
         logger.info { "Plugin onLoad" }
     }
