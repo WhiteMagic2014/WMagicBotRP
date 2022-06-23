@@ -13,11 +13,13 @@ WMagicBotRP 作为mirai-console 的插件项目,初期目标是把 WMagicBotR中
 
 ## 更新记录
 ### 0.0.1
--- 无spring环境整合了sqlite+mybatis (数据存储还得是数据库)
+- 无spring环境整合了sqlite+mybatis (数据存储还得是数据库)
 
 ### 0.0.2
--- mybatis 执行insert、update和delete操作时自动提交
--- 从WMagicBotR 迁移 DBVersion 部分功能
+- mybatis 执行insert、update和delete操作时自动提交
+- 从WMagicBotR 迁移 DBVersion 功能
+- 从WMagicBotR 迁移 MagicTask 功能
+- 从WMagicBotR 迁移 MagicMsgSender 功能
 
 ## 计划任务
 - 移植部分WMagicBotR功能
